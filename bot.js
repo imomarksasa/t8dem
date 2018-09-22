@@ -70,6 +70,21 @@ client.on('message', message => {
       if (res.startsWith('Error:')) return message.channel.send(`اختصار الرابط:**${res}**`); 
       message.channel.send(`اختصار الرابط:**<${res}>**`); 
  })}}});
+
+ client.on('message', message => {
+     if (message.content === (prefix + "bot")) {
+         if(!message.channel.guild) return;
+     let embed = new Discord.RichEmbed()
+  .setColor("#8650a7")
+  .addField("** ✅ Servers: **" , client.guilds.size)
+  .addField("** ✅ Users: **" , client.users.size)
+  .addField("** ✅ Owner Bot: **" ,  
+  .addField("** ✅ Channels: **" , client.channels.size)
+    .addField("** 🚀 Ping **" , Date.now() - message.createdTimestamp)
+    .setTimestamp()
+  message.channel.sendEmbed(embed);
+    }
+});
   
 
 
