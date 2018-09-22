@@ -72,16 +72,7 @@ client.channels.find('id', '492260558066810880').setName("Today!");
   }, 3000);
 });
 
-client.on('message',function(message) {
-    let messageArray = message.content.split(" ");
-    let args = messageArray[1];
-   if(message.content.startsWith(prefix + "count")) {
-       if(!args) return message.reply('ℹ ``اختر رقم``');
-       let i;
-       for (i = 0; i < `${parseInt(args) + 1}`; ++i)
-       message.channel.send(i)
-   }
-});
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
