@@ -16,20 +16,20 @@ client.on('message', message => {
 //جميع الحقوق محفوظهه لريبل فقط . 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '492260558066810880').setName("W");
-client.channels.find('id', '492260558066810880').setName("We");
-client.channels.find('id', '492260558066810880').setName("Wel");
-client.channels.find('id', '492260558066810880').setName("Welc");
-client.channels.find('id', '492260558066810880').setName("Welco");
-client.channels.find('id', '492260558066810880').setName("Welcom");
-client.channels.find('id', '492260558066810880').setName("Welcome");
-client.channels.find('id', '492260558066810880').setName("Welcome T");
-client.channels.find('id', '492260558066810880').setName("Welcome To");
-client.channels.find('id', '492260558066810880').setName("Welcome To A");
-client.channels.find('id', '492260558066810880').setName("Welcome To Al");
-client.channels.find('id', '492260558066810880').setName("Welcome To Alf");
-client.channels.find('id', '492260558066810880').setName("Welcome To Alfg");
-client.channels.find('id', '492260558066810880').setName("Welcome To Alfgmm");
+client.channels.find('id', '492260558066810880').setName("N");
+client.channels.find('id', '492260558066810880').setName("No");
+client.channels.find('id', '492260558066810880').setName("Not");
+client.channels.find('id', '492260558066810880').setName("E");
+client.channels.find('id', '492260558066810880').setName("Ev");
+client.channels.find('id', '492260558066810880').setName("Eve");
+client.channels.find('id', '492260558066810880').setName("Even");
+client.channels.find('id', '492260558066810880').setName("Evene");
+client.channels.find('id', '492260558066810880').setName("Evenet");
+client.channels.find('id', '492260558066810880').setName("T");
+client.channels.find('id', '492260558066810880').setName("To");
+client.channels.find('id', '492260558066810880').setName("Tod");
+client.channels.find('id', '492260558066810880').setName("Toda");
+client.channels.find('id', '492260558066810880').setName("Today!");
   }, 3000);
 });
 
