@@ -12,6 +12,14 @@ client.on('message', message => {
   	}
 });
 
+    client.on('message', message => {
+      // If the message is "A!avatar"
+      if (message.content === '#avatar') {
+        // Send the user's avatar URL
+        message.reply(message.author.avatarURL);
+      }
+    });
+
   const bannedwords = [
   "#credit",
   "#profile",
