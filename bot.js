@@ -25,11 +25,11 @@ client.channels.find('id', '492260558066810880').setName("Welcom");
 client.channels.find('id', '492260558066810880').setName("Welcome");
 client.channels.find('id', '492260558066810880').setName("Welcome T");
 client.channels.find('id', '492260558066810880').setName("Welcome To");
-client.channels.find('id', '492260558066810880').setName("Welcome To T");
-client.channels.find('id', '492260558066810880').setName("Welcome To Te");
-client.channels.find('id', '492260558066810880').setName("Welcome To Tes");
-client.channels.find('id', '492260558066810880').setName("Welcome To Test");
-client.channels.find('id', '492260558066810880').setName("Welcome To Tester");
+client.channels.find('id', '492260558066810880').setName("Welcome To A");
+client.channels.find('id', '492260558066810880').setName("Welcome To Al");
+client.channels.find('id', '492260558066810880').setName("Welcome To Alf");
+client.channels.find('id', '492260558066810880').setName("Welcome To Alfg");
+client.channels.find('id', '492260558066810880').setName("Welcome To Alfgmm");
   }, 3000);
 });
 
