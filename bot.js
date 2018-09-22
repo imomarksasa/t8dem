@@ -74,7 +74,7 @@ client.channels.find('id', '492260558066810880').setName("Today!");
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '492792418253668353').setName("Total Users: ${member.guild.memberCount}");  
+client.channels.find('id', '492792418253668353').setName('Total Users: ${member.guild.memberCount}');  
      }, 3000);
 });
 
