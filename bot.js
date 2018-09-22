@@ -80,7 +80,7 @@ client.on('message', message => {
   .addField("** ✅ Servers: **" , client.guilds.size)
   .addField("** ✅ Users: **" , client.users.size)
   .addField("** ✅ Channels: **" , client.channels.size)
-  .addField("** ✅ Bot By Alaseri**" , )
+  .addField("** ✅ Bot By**" , Alaseri )
     .addField("** 🚀 Ping **" , Date.now() - message.createdTimestamp)
     .setTimestamp()
   message.channel.sendEmbed(embed);
