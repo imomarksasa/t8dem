@@ -71,5 +71,20 @@ client.channels.find('id', '492260558066810880').setName("Today!");
   }, 3000);
 });
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('492792418253668353').setName(`Total Users: ${member.guild.memberCount}`);
+    let humans = member.guild.memberCount - member.guild.members.filter(m => m.user.bot).size
+    member.guild.channels.get('492792432505651220').setName(`Total Humans: ${humans}`);
+    let bots = member.guild.members.filter(m => m.user.bot).size
+    member.guild.channels.get('492792447949209609').setName(`Total Bots: ${bots}`);
+});
+client.on('guildMemberRemove', member => {
+    member.guild.channels.get('492792418253668353').setName(`Total Users: ${member.guild.memberCount}`);
+    let humans = member.guild.memberCount - member.guild.members.filter(m => m.user.bot).size
+    member.guild.channels.get('492792432505651220').setName(`Total Humans: ${humans}`);
+    let bots = member.guild.members.filter(m => m.user.bot).size
+    member.guild.channels.get('492792447949209609').setName(`Total Bots: ${bots}`);
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
