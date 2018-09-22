@@ -63,7 +63,6 @@ client.on('message', message => {
   
   const shorten = require('isgd');
 client.on('message', message => {
-        var prefix = "#";
 
  if (message.content.startsWith(prefix + 'short')) {
     let args = message.content.split(" ").slice(1);
