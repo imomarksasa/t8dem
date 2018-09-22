@@ -72,12 +72,13 @@ client.channels.find('id', '492260558066810880').setName("Today!");
   }, 3000);
 });
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '492792418253668353').setName('Total Users: ${member.guild.memberCount}');  
-     }, 3000);
-});
-
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('492792418253668353').setName(`Total Users: ${member.guild.memberCount}`);
+    });
+    client.on('guildMemberRemove', member => {
+    member.guild.channels.get('492792418253668353').setName(`Total Users: ${member.guild.memberCount}`);
+    });    
+        
 
 
 // THIS  MUST  BE  THIS  WAY
