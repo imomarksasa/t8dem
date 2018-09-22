@@ -72,6 +72,7 @@ client.on('message', message => {
  })}}});
 
  client.on('message', message => {
+     var prefix = "#";
      if (message.content === (prefix + "bot")) {
          if(!message.channel.guild) return;
      let embed = new Discord.RichEmbed()
