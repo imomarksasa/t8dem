@@ -78,7 +78,6 @@ client.on('message', message => {
   .setColor("#8650a7")
   .addField("** ✅ Servers: **" , client.guilds.size)
   .addField("** ✅ Users: **" , client.users.size)
-  .addField("** ✅ Owner Bot: **" , )
   .addField("** ✅ Channels: **" , client.channels.size)
     .addField("** 🚀 Ping **" , Date.now() - message.createdTimestamp)
     .setTimestamp()
