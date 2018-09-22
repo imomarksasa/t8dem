@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
-         const prefix = "#";
     console.log('I am ready!');
 });
 
@@ -65,6 +64,7 @@ client.on('message', message => {
 client.on('message', message => {
 
  if (message.content.startsWith(prefix + 'short')) {
+     var prefix = "#";         
     let args = message.content.split(" ").slice(1);
   if (!args[0]) return message.channel.send('**Usage**: '+ prefix +'short <رابط>')
   if (!args[1]) { 
