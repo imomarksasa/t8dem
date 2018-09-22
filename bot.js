@@ -12,6 +12,36 @@ client.on('message', message => {
   	}
 });
 
+const fs = require('fs')
+const p = {}
+const premium = ['321476121956974595']
+client.on('message', message => {
+if(message.channel.type === "dm") return;
+if(message.author.bot) return;
+if(!p[message.guild.id]) p[message.guild.id] = {
+    prefix: "#"
+}
+const prefix = p[message.guild.id].prefix
+  if (message.content.startsWith(prefix + "setprefix")) {
+    if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
+    let newPrefix = message.content.split(' ').slice(1).join(" ")
+    if(!newPrefix) return message.reply(`**${prefix}setprefix <prefix>**`)
+    p[message.guild.id].prefix = newPrefix
+    message.channel.send(`**${message.guild.name}'تم تغيير البرفكس ${newPrefix}**`);
+} 
+if (message.content === prefix + "mutechannel") {
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠ | لا يوجد لديك صلاحية**');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+
+           }).then(() => {
+               message.reply("تم تقفيل الشات ✅ ")
+           });
+             }
+
+
+});
+
  client.on('message', message => {   
         var  user = message.mentions.users.first() || message.author;
     if (message.content.startsWith("avatar")) {
@@ -60,23 +90,6 @@ client.on('message', message => {
 
 
   
-  const shorten = require('isgd');
-client.on('message', message => {
-
- if (message.content.startsWith(prefix + 'short')) {
-     var prefix = "#";         
-    let args = message.content.split(" ").slice(1);
-  if (!args[0]) return message.channel.send('**Usage**: '+ prefix +'short <رابط>')
-  if (!args[1]) { 
-    shorten.shorten(args[0], function(res) {
-      if (res.startsWith('Error:')) return message.channel.send('**Usage**: '+ prefix +'short <link>');
-      message.channel.send(`اختصار الرابط:**<${res}>**`); 
-    })
-  } else { 
-    shorten.custom(args[0], args[1], function(res) { 
-      if (res.startsWith('Error:')) return message.channel.send(`اختصار الرابط:**${res}**`); 
-      message.channel.send(`اختصار الرابط:**<${res}>**`); 
- })}}});
 
  client.on('message', message => {
      if (message.content === (prefix + "bot")) {
