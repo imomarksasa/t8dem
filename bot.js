@@ -3,6 +3,7 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
+         const prefix = "+";
     console.log('I am ready!');
 });
 
@@ -12,8 +13,7 @@ client.on('message', message => {
   	}
 });
 
- client.on('message', message => {
-          var prefix = "#";    
+ client.on('message', message => {   
         var  user = message.mentions.users.first() || message.author;
     if (message.content.startsWith("avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
