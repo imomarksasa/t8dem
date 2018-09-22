@@ -12,13 +12,12 @@ client.on('message', message => {
   	}
 });
 
-    client.on('message', message => {
-      // If the message is "A!avatar"
-      if (message.content === 'avatar') {
-        // Send the user's avatar URL
-        message.reply(message.author.avatarURL);
-      }
-    });
+ client.on('message', message => {
+        var  user = message.mentions.users.first() || message.author;
+    if (message.content.startsWith("avatar")) {
+message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
+}
+});
 
   const bannedwords = [
   "#credit",
