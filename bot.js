@@ -15,7 +15,7 @@ client.on('message', message => {
  client.on('message', message => {
           var prefix = "#";    
         var  user = message.mentions.users.first() || message.author;
-    if (message.content.startsWith("#avatar")) {
+    if (message.content.startsWith("avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -80,7 +80,6 @@ client.on('message', message => {
  })}}});
 
  client.on('message', message => {
-     var prefix = "#";
      if (message.content === (prefix + "bot")) {
          if(!message.channel.guild) return;
      let embed = new Discord.RichEmbed()
