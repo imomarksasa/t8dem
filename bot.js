@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
-         const prefix = "+";
+         const prefix = "#";
     console.log('I am ready!');
 });
 
