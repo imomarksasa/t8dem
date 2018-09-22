@@ -51,33 +51,13 @@ client.on('message', message => {
   }) 
 
 
-//By ReBeL //By ReBeL 
-//جميع الحقوق محفوظهه لريبل فقط . 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '492260558066810880').setName("N");
-client.channels.find('id', '492260558066810880').setName("No");
-client.channels.find('id', '492260558066810880').setName("Not");
-client.channels.find('id', '492260558066810880').setName("E");
-client.channels.find('id', '492260558066810880').setName("Ev");
-client.channels.find('id', '492260558066810880').setName("Eve");
-client.channels.find('id', '492260558066810880').setName("Even");
-client.channels.find('id', '492260558066810880').setName("Evene");
-client.channels.find('id', '492260558066810880').setName("Evenet");
-client.channels.find('id', '492260558066810880').setName("T");
-client.channels.find('id', '492260558066810880').setName("To");
-client.channels.find('id', '492260558066810880').setName("Tod");
-client.channels.find('id', '492260558066810880').setName("Toda");
-client.channels.find('id', '492260558066810880').setName("Today!");  
-  }, 3000);
+client.on('message', message => {
+    if (message.content.startsWith("#bans")) {
+        message.guild.fetchBans()
+        .then(bans => message.channel.send(${bans.size} عدد اشخاص المبندة من السيرفر))
+  .catch(console.error);
+}
 });
-
-client.on('guildMemberAdd', member => {
-    member.guild.channels.get('492792418253668353').setName(`Total Users: ${member.guild.memberCount}`);
-    });
-    client.on('guildMemberRemove', member => {
-    member.guild.channels.get('492792418253668353').setName(`Total Users: ${member.guild.memberCount}`);
-    });    
         
 
 
