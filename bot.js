@@ -68,10 +68,10 @@ client.channels.find('id', '492260558066810880').setName("T");
 client.channels.find('id', '492260558066810880').setName("To");
 client.channels.find('id', '492260558066810880').setName("Tod");
 client.channels.find('id', '492260558066810880').setName("Toda");
-client.channels.find('id', '492260558066810880').setName("Today!");
-client.channels.find('id', '492792418253668353').setName("Total Users: ${member.guild.memberCount}");    
+client.channels.find('id', '492260558066810880').setName("Today!");  
   }, 3000);
 });
+client.channels.find('id', '492792418253668353').setName("Total Users: ${member.guild.memberCount}");  
 
 
 
